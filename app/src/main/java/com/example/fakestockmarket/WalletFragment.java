@@ -1,6 +1,7 @@
 package com.example.fakestockmarket;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,8 +18,7 @@ public class WalletFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        btn_deposit = requireView().findViewById(R.id.button_deposit);
         return inflater.inflate(R.layout.fragment_wallet, container, false);
     }
-    }
+}
 
