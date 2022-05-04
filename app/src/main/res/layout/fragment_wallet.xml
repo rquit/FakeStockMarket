@@ -58,8 +58,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tvPortfolioValueText"
         android:layout_marginTop="0dp"
-        android:text="$26546.53"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        tools:text="$26546.53" />
 
     <TextView
         android:id="@+id/tvCash"
