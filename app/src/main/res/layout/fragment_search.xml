@@ -3,10 +3,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/etSearchQuery"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Search fragment"
-        android:textSize="30sp"
-        />
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Search ticker" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvStocks"
+        android:layout_width="match_parent"
+        android:layout_height="686dp"
+        android:layout_below="@+id/etSearchQuery"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp" />
 </RelativeLayout>
