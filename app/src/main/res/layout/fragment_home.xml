@@ -4,4 +4,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Portfolio Value: "
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button_Stock"
+        android:layout_width="wrap_content"
+        android:layout_height="68dp"
+        android:backgroundTint="@color/white"
+        android:text="Stock"
+        android:textColor="@color/black"
+        android:translationX="35dp"
+        android:translationY="350dp" />
+
+    <Button
+        android:id="@+id/button_Crypto"
+        android:layout_width="115dp"
+        android:layout_height="68dp"
+        android:backgroundTint="@color/white"
+        android:text="Crypto"
+        android:textColor="@color/black"
+        android:translationX="250dp"
+        android:translationY="350dp" />
+
 </RelativeLayout>
