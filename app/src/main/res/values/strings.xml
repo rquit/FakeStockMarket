@@ -3,4 +3,9 @@
     <string name="home">Home</string>
     <string name="search">Search</string>
     <string name="wallet">Wallet</string>
+    <string name="deposit">Deposit</string>
+    <string name="portfolio_value">Portfolio Value:</string>
+    <string name="withdraw">Withdraw</string>
+    <string name="Linked_Accounts">Withdraw</string>
+    <string name="cash">Cash:</string>
 </resources>
