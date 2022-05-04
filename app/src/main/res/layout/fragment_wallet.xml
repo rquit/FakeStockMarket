@@ -3,59 +3,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:background="#8A669900"
-    tools:ignore="ExtraText"
+    android:layout_margin="10dp"
+    android:background="#fff"
 
 
-    >
+    tools:ignore="ExtraText">
 
     <TextView
+        android:id="@+id/tvPortfolioValueText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/portfolio_value"
         android:textColor="@color/black"
         android:textSize="30sp"
-        android:textStyle="bold"
-        android:translationY="75dp" />
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/button_deposit"
         android:layout_width="wrap_content"
         android:layout_height="61dp"
-        android:backgroundTint="@color/white"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#232323"
         android:text="@string/deposit"
-        android:textColor="@color/black"
-        android:translationX="35dp"
-        android:translationY="575dp" />
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/button_withdraw"
         android:layout_width="wrap_content"
         android:layout_height="62dp"
-        android:backgroundTint="@color/white"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#232323"
         android:text="@string/withdraw"
-        android:textColor="@color/black"
-        android:translationX="235dp"
-        android:translationY="575dp" />
+        android:textColor="@color/white" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvCashText"
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:layout_below="@+id/tvPortfolioValue"
         android:text="@string/cash"
         android:textColor="@color/black"
         android:textSize="30sp"
-        android:textStyle="bold"
-        android:translationY="200dp" />
+        android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/tvPortfolioValue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Recent History:"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:translationY="350dp" />
+        android:layout_below="@id/tvPortfolioValueText"
+        android:layout_marginTop="0dp"
+        android:text="$26546.53"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/tvCash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvCashText"
+        android:layout_marginTop="0dp"
+        android:textSize="30sp"
+        tools:text="$3.50" />
 
 
 </RelativeLayout>
