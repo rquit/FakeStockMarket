@@ -12,20 +12,13 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class WalletFragment extends Fragment {
+    Button btn_deposit;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        btn_deposit = requireView().findViewById(R.id.button_deposit);
         return inflater.inflate(R.layout.fragment_wallet, container, false);
-
-        Button btn_deposit =(Button) findViewById(R.id.button_deposit);
-
-        btn_deposit.setOnClickListener (new View.onClickListener() {
-            @Override
-                    public void onClick(View v){
-
-            }
-        });
     }
     }
 
