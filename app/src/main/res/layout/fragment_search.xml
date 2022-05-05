@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -12,8 +13,8 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Search ticker" />
+        android:hint="Enter ticker/symbol"
+        android:inputType="textPersonName" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvStocks"

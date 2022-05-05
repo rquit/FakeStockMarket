@@ -1,11 +1,17 @@
 package com.example.fakestockmarket;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,6 +21,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fakestockmarket.models.Stock;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +52,10 @@ public class SearchFragment extends Fragment {
 
         rvStocks.setLayoutManager(new LinearLayoutManager(getActivity()));
         rvStocks.setAdapter(stocksAdapter);
+
+        etSearchQuery.setOnEditorActionListener((TextView.OnEditorActionListener) (textView, actionId, keyEvent) -> {
+            return true;
+        });
 
         Stock example_stock1 = new Stock("AAPL", new BigDecimal("1.43"), new BigDecimal("240.65"));
         Stock example_stock2 = new Stock("AMC", new BigDecimal("20.83"), new BigDecimal("2133.87"));
