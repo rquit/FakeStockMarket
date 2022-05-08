@@ -18,6 +18,14 @@ public class Stock {
         this.price = price;
     }
 
+    public boolean equals(Stock stock) {
+        return (
+                ticker.equals(stock.getTicker()) &&
+                        priceChange.equals(stock.getPriceChange()) &&
+                        price.equals(stock.getPrice())
+                );
+    }
+
     public String getTicker() {
         return ticker;
     }

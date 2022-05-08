@@ -1,6 +1,7 @@
 package com.example.fakestockmarket;
 
 import android.content.Context;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,10 +48,30 @@ public class StocksAdapter extends RecyclerView.Adapter<StocksAdapter.ViewHolder
         notifyItemRangeRemoved(0, stockLength);
     }
 
+    public void clearStock(String ticker) {
+        for(int i = 0; i < stocks.size(); i++) {
+            if(stocks.get(i).getTicker().equals(ticker)) {
+                stocks.remove(i);
+                notifyItemRemoved(i);
+                return;
+            }
+        }
+    }
+
     public void addAll(List<Stock> stocksToAdd) {
         int stockLength = this.stocks.size();
         this.stocks.addAll(stocksToAdd);
         notifyItemRangeInserted(stockLength, stocksToAdd.size());
+    }
+
+    public void add(Stock stockToAdd) {
+        this.stocks.add(stockToAdd);
+        notifyItemInserted(stocks.size()-1);
+    }
+
+    public void addToTop(Stock stockToAdd) {
+        this.stocks.add(0, stockToAdd);
+        notifyItemInserted(0);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
