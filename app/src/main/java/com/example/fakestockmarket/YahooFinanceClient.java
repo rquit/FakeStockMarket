@@ -21,19 +21,4 @@ public class YahooFinanceClient {
         }
         return null;
     }
-
-    public static List<Stock> getAllSimilarStocks(String ticker) throws IOException {
-        Set<String> distanceOne = TextUtils.levenshteinDistanceOnce(ticker);
-        List<Stock> stocks = new ArrayList<>();
-        for(String s: distanceOne) {
-            yahoofinance.Stock yf = YahooFinance.get(s);
-            if(yf != null) {
-                BigDecimal price = yf.getQuote().getPrice();
-                BigDecimal change = yf.getQuote().getChange();
-                String name = yf.getSymbol();
-                stocks.add(new Stock(name, change, price));
-            }
-        }
-        return stocks;
-    }
 }
