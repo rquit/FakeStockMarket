@@ -1,6 +1,7 @@
 package com.example.fakestockmarket;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fakestockmarket.models.Stock;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 public class StocksAdapter extends RecyclerView.Adapter<StocksAdapter.ViewHolder> {
@@ -91,6 +93,11 @@ public class StocksAdapter extends RecyclerView.Adapter<StocksAdapter.ViewHolder
         public void bind(Stock stock) {
             tvStockName.setText(stock.getTicker());
             tvPriceChange.setText(stock.getPriceChange().toString());
+            if(stock.getPriceChange().compareTo(new BigDecimal("0")) > 0) {
+                tvPriceChange.setTextColor(Color.rgb(40,200,40));
+            } else {
+                tvPriceChange.setTextColor(Color.rgb(200,40,40));
+            }
             tvPrice.setText(stock.getPrice().toString());
         }
     }
