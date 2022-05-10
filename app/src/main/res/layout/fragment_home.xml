@@ -30,6 +30,7 @@
         android:layout_marginStart="0dp"
         android:layout_marginBottom="0dp"
         android:layout_toEndOf="@+id/tvPortfolioValueText"
+        android:text="$26546.53"
         android:textSize="30sp"
         tools:text="$26546.53" />
 
